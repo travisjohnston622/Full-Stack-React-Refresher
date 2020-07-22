@@ -1,0 +1,55 @@
+.appBar {
+    padding: 30px 0 0 0;
+    margin-bottom: 10px;
+    background-color: #243c5a;
+    color: #bfd3eb;
+    text-align: center;
+    text-shadow: 0px 1px 3px #000000;
+    box-shadow: 0 1px 4px rgb(255,255,255,0.6);
+}
+
+.appBar h1 {
+    margin: 0 0 35px 0;
+    font-size: 2.5rem;
+}
+
+.navBar {
+    display: block;
+    background-color: #16283d;
+    border-top: 1px solid #04080c;
+    color: #0e1a29;
+    text-shadow: none;
+}
+
+.navList {
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    /* removes default list styling from the browser */
+    list-style: none;
+    /* removes browser spacing on inline-block children */
+    font-size: 0;
+}
+
+.navList > * {
+    box-sizing: border-box;
+    display: inline-block;
+    color: #bfd3eb;
+    /* resets default font-sizing */
+    font-size: 1.3rem;
+}
+
+.navLink {
+    display: inline-block;
+    color: #bfd3eb;
+    padding: 15px 20px;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.navLink:hover {
+    color: #bfd3eb;
+    background-color: #28415e;
+    text-decoration: none;
+}
