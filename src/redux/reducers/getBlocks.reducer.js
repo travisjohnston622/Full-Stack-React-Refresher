@@ -1,6 +1,6 @@
 const getBlocksReducer = (state = [], action) => {
     switch (action.type) {
-        case 'SET_BLOCKS';
+        case 'SET_BLOCKS':
             return action.payload;
         default:
             return state;
