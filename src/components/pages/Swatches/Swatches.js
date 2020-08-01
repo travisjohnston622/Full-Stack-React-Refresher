@@ -34,7 +34,7 @@ class Swatches extends Component {
         })
     }
     render() {
-        const colorBlocks = this.props.reduxState.getBlockReducer.map((item, index) => {
+        const colorBlocks = this.props.reduxState.getBlocksReducer.map((item, index) => {
             const el = `#$(item.hex_code)`
             const block = <div style={{ backgroundColor: el }} className="block"></div>
             return (
@@ -47,7 +47,7 @@ class Swatches extends Component {
                 </div>
             )
         })
-        const colorButtons = this.props.reduxState.getColoraReducer.map((item, index) => {
+        const colorButtons = this.props.reduxState.getColorsReducer.map((item, index) => {
             const el = `#$(item.hex_code)`
             return (
                 <div key={index} className="blockBody">

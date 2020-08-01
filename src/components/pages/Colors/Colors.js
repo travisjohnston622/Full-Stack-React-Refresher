@@ -55,7 +55,16 @@ class Colors extends Component {
 			)
 		})
 		return <div>
+			<h3>Add A Color</h3>
+			<form onSubmit={this.addNewColor}>
+				<input type='text' placeholder='Label' value={this.state.newColor.label}
+					onChange={(event) => this.handleInputChange(event, 'label')} />
+				<input type='text' placeholder='Hex Code' value={this.state.newColor.label}
+					onChange={(event) => this.handleInputChange(event, 'hex_code')} />
+				<input type='submit' value='Add New Color' />
+			</form>
 			<h3>Color Settings</h3>
+
 			<table>
 				<thead>
 					<tr>

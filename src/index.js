@@ -6,11 +6,11 @@ import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware } from 'redux';
 // Provider allows us to use redux within our react app
 import { Provider } from 'react-redux';
-import logger from 'redux-logger';
+//import logger from 'redux-logger';
 // Import saga middleware
 import createSagaMiddleware from 'redux-saga';
 //Imports Sagas from rootSaga
-import rootSaga from './redux/sagas/_root.saga';
+import rootSaga from './redux/sagas/_root.saga.js';
 //Imports Reducers from rootReducer
 import rootReducer from './redux/reducers/_root.reducer';
 // Create sagaMiddleware
@@ -19,7 +19,7 @@ const sagaMiddleware = createSagaMiddleware();
 const storeInstance = createStore(
     rootReducer,
     // Add sagaMiddleware to our store
-    applyMiddleware(sagaMiddleware, logger),
+    applyMiddleware(sagaMiddleware) //logger),
 );
 
 // Pass rootSaga into our sagaMiddleware
