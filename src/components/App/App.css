@@ -1,3 +1,19 @@
 .container {
     padding: 10px 20px;
 }
+a {
+    color: #FFF;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+h2, h3 {
+    text-align: center;
+}
