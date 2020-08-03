@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
-function addBlock(action) {
+function* addBlock(action) {
     try {
         const response = yield axios({
             method: 'POST',

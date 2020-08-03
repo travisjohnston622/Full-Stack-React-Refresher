@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { put, takeLatest } from 'redux-saga/effects';
+import { takeLatest } from 'redux-saga/effects';
 
-function deleteBlock(action) {
+function* deleteBlock(action) {
     try {
         const response = yield axios({
             method: 'DELETE',

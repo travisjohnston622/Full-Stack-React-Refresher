@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
-function addColor(action) {
+function* addColor(action) {
     try {
         const response = yield axios({
             method: 'POST',

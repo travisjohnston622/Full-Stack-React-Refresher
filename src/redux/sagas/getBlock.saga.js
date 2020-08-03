@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
-function getBlocks(action) {
+function* getBlocks(action) {
     try {
         const response = yield axios({
             method: 'GET',
