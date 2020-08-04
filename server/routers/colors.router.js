@@ -22,7 +22,18 @@ router.get('/', (req, res) => {
 });
 
 // BASE MODE - make a route to save a new color option
-
+router.post('/', (req, res) => {
+    const newColor = req.body;
+    const queryString = `INSERT INTO "colors" ("label", "hex_code")
+    VALUES ('${newColor.label}', '${newColor.hex_code}');`;
+    pool.query(queryString)
+        .then((response) => {
+            res.sendStatus(201);
+        })
+        .catch((err) => {
+            res.sendStatus(500);
+        })
+});
 // BASE MODE - make a route to update the label and/or hex_code associated with a specific color
 
 // BASE MODE - make a route to delete a specific color option
